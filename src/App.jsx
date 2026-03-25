@@ -34,7 +34,7 @@ const handleClick = (row, col) => {
     setIngeneeringCheck(ingeneeringCheck+2);
 };
 
-const [isDMMode, setIsDMMode] = useState(true); // можеш поки true для тесту
+const [isDMMode, setIsDMMode] = useState(false); 
 
 function shuffle(array) {
   return array
