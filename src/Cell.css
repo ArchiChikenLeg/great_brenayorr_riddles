@@ -1,0 +1,15 @@
+.cell-closed{
+    background-color: black;
+}
+.cell-success{
+    background-color: var(--success);
+}
+.cell-fail{
+    background-color: var(--failure);
+}
+.cell-plus-one{
+    background-color: var(--addOne);
+}
+.cell-plus-two{
+    background-color: var(--addTwo);
+}

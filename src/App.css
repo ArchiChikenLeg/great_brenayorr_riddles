@@ -1,0 +1,62 @@
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  gap: 10px;
+  width: 600px;
+  height: 600px;
+}
+
+.cell{
+  font-size: 50px;
+}
+
+.dm-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  gap: 4px;
+  margin-top: 20px;
+  width: 100px;
+  height: 100px;
+}
+
+.dm-grid {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+
+.dm-cell {
+  width: 30px;
+  height: 30px;
+  font-size: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #999;
+}
+.cell-success{
+    background-color: var(--success);
+}
+.cell-fail{
+    background-color: var(--failure);
+}
+.cell-plus-one{
+    background-color: var(--addOne);
+}
+.cell-plus-two{
+    background-color: var(--addTwo);
+}
+
+.command-pannel{
+  display: flex;
+}
+
+.btn-DM-mode{
+  margin: 10px;
+}
+
+.btn-new-matrix{
+    margin: 10px;
+}
