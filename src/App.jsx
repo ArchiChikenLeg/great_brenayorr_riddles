@@ -68,6 +68,42 @@ const generateNewMatrix = () => {
   setCells(newMatrix);
   setIngeneeringCheck(8);
 };
+const updateCell = (rowIndex, colIndex, newData) => {
+  setCells(prev =>
+    prev.map((row, r) =>
+      row.map((cell, c) =>
+        r === rowIndex && c === colIndex
+          ? { ...cell, ...newData } // змінюємо тільки цю клітинку
+          : cell
+      )
+    )
+  );
+};
+
+const ShowNextFail = () =>{
+      let  maxOpenedCol = -1;
+      
+
+      for(let i = 0; i <4; i++ ){
+        const tmpColumn = [];
+        for(let j = 0; j < 4; j++){
+          tmpColumn.push(cells[j][i].isOpen);
+        }
+        if (tmpColumn.includes(true))
+          maxOpenedCol = i;
+      }
+      
+      console.log(maxOpenedCol)
+
+      cells.forEach((row, rowIndex) => {
+        if (row[maxOpenedCol+1].value === "fail") {
+          updateCell(rowIndex, maxOpenedCol+1, { isOpen: true });
+        }
+      });
+
+
+      
+}
 
   return (
     <>
@@ -91,6 +127,7 @@ const generateNewMatrix = () => {
       <button onClick={generateNewMatrix} className="btn-new-matrix">
         New Matrix
       </button>
+      <button onClick={ShowNextFail} className="btn-new-matrix">Show next fail</button>
     </div>
     
     {isDMMode && (
