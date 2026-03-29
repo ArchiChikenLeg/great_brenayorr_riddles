@@ -20,7 +20,7 @@ function App() {
   )
 );
 
-const [ingeneeringCheck, setIngeneeringCheck] = useState(8);
+const [ingeneeringCheck, setIngeneeringCheck] = useState(6);
 
 const handleClick = (row, col) => {
   setCells(prev => {
@@ -66,7 +66,7 @@ const generateNewMatrix = () => {
     row.map(value => ({ isOpen: false, value }))
   );
   setCells(newMatrix);
-  setIngeneeringCheck(8);
+  setIngeneeringCheck(6);
 };
 const updateCell = (rowIndex, colIndex, newData) => {
   setCells(prev =>
