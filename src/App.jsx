@@ -20,7 +20,8 @@ function App() {
   )
 );
 
-const [ingeneeringCheck, setIngeneeringCheck] = useState(8);
+const [ingeneeringCheck, setIngeneeringCheck] = useState(5);
+const[modCheck,setModCheck]=useState(0);
 
 const handleClick = (row, col) => {
   setCells(prev => {
@@ -29,9 +30,9 @@ const handleClick = (row, col) => {
     return copy;
   });
   if (cells[row][col].value == "plus-one" && !cells[row][col].isOpen)
-    setIngeneeringCheck(ingeneeringCheck+1);
+    setModCheck(modCheck+1);
   if (cells[row][col].value == "plus-two" && !cells[row][col].isOpen)
-    setIngeneeringCheck(ingeneeringCheck+2);
+    setModCheck(modCheck+2);
 };
 
 const [isDMMode, setIsDMMode] = useState(false); 
@@ -66,7 +67,7 @@ const generateNewMatrix = () => {
     row.map(value => ({ isOpen: false, value }))
   );
   setCells(newMatrix);
-  setIngeneeringCheck(8);
+  setModCheck(0);
 };
 const updateCell = (rowIndex, colIndex, newData) => {
   setCells(prev =>
@@ -107,7 +108,7 @@ const ShowNextFail = () =>{
 
   return (
     <>
-    <p>Перевірка інженерії: {ingeneeringCheck}</p>
+    <p>Перевірка Інтелекта: <button onClick={()=>setIngeneeringCheck(ingeneeringCheck-1)}>-</button>  {ingeneeringCheck+modCheck}  <button onClick={()=>setIngeneeringCheck(ingeneeringCheck+1)}>+</button></p>
        <div className="grid">
       {cells.map((row, rowIndex) =>
     row.map((cell, colIndex) => (
