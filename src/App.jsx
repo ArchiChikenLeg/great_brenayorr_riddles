@@ -67,7 +67,7 @@ const generateNewMatrix = () => {
     row.map(value => ({ isOpen: false, value }))
   );
   setCells(newMatrix);
-  setIngeneeringCheck(8);
+  setModCheck(0);
 };
 const updateCell = (rowIndex, colIndex, newData) => {
   setCells(prev =>
