@@ -62,3 +62,20 @@
 .btn-new-matrix{
     margin: 10px;
 }
+
+.btnList{
+  display: flex;
+  gap: 10px;
+}
+
+.rdlBtn{
+  padding: 10px;
+  background-color: #76cc7f;
+  border: 1px solid #999;
+  font-size: 20px;
+  color: var(--text-h);
+  border-radius: 10px;
+}
+.clsBtn{
+  background-color: #cc7676;
+}
