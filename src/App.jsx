@@ -8,6 +8,7 @@ function App() {
   return(<>
     <div className='btnList'>
       <button onClick={() => setRiddle('lockpick')} className='rdlBtn'>Lock Pick</button>
+      <button onClick={() => setRiddle('mechanic')} className='rdlBtn'>Mechanic</button>
       <button onClick={() => setRiddle('none')} className='rdlBtn clsBtn'>Close</button>
     </div> 
     <RiddleBlock riddleCode={riddle}></RiddleBlock>
